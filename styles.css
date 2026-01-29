@@ -148,11 +148,21 @@ body {
 
 /* Showcase Section */
 .showcase-section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--md-spacing-2xl);
+    justify-items: center;
+    align-items: start;
     padding: var(--md-spacing-2xl) var(--md-spacing-md);
     margin-bottom: var(--md-spacing-2xl);
+}
+
+.card-link {
+    text-decoration: none;
+    color: inherit;
+    max-width: 500px;
+    width: 100%;
+    justify-self: center;
 }
 
 .card {
@@ -189,6 +199,18 @@ body {
     display: block;
     aspect-ratio: 1;
     flex-shrink: 0;
+}
+
+.app-icon {
+    font-size: 120px;
+    line-height: 1;
+    color: var(--md-primary);
+    display: block;
+}
+
+/* Spell It Now theme color (matches spellitnow.com) */
+.card-link-spellitnow .app-icon {
+    color: #6750A4;
 }
 
 .app-name {
@@ -261,6 +283,7 @@ body {
     }
     
     .showcase-section {
+        grid-template-columns: 1fr;
         padding: var(--md-spacing-lg) var(--md-spacing-sm);
     }
     
@@ -271,6 +294,10 @@ body {
     .app-logo {
         width: 100px;
         height: 100px;
+    }
+    
+    .app-icon {
+        font-size: 100px;
     }
     
     .footer {
@@ -293,6 +320,10 @@ body {
     .app-logo {
         width: 80px;
         height: 80px;
+    }
+    
+    .app-icon {
+        font-size: 80px;
     }
 }
 

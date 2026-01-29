@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Observe hero and card sections
     const heroSection = document.querySelector('.hero-section');
-    const card = document.querySelector('.card');
+    const cards = document.querySelectorAll('.card');
 
     if (heroSection) {
         heroSection.style.opacity = '0';
@@ -31,10 +31,10 @@ document.addEventListener('DOMContentLoaded', function() {
         }, 100);
     }
 
-    if (card) {
+    cards.forEach(function(card) {
         card.style.opacity = '0';
         card.style.transform = 'translateY(20px)';
         card.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
         observer.observe(card);
-    }
+    });
 });
